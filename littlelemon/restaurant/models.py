@@ -8,8 +8,8 @@ class Booking(models.Model):
     guests = models.SmallIntegerField()
     date = models.DateTimeField()
 
-    class Meta:
-        unique_together = ("name", "date")
+    # class Meta:
+    #     # unique_together = ("name", "date")
 
     def __str__(self):
         return self.name

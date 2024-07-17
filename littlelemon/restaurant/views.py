@@ -8,6 +8,7 @@ from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateAPIView,
     DestroyAPIView,
+    CreateAPIView,
 )
 
 from rest_framework.viewsets import ModelViewSet
@@ -56,7 +57,7 @@ class MenuItemsView(ListCreateAPIView):
     serializer_class = MenuItemSerializer
 
 
-class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
+class SingleMenuItemView(CreateAPIView, RetrieveUpdateAPIView, DestroyAPIView):
     permission_classes = [IsAuthenticated]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer

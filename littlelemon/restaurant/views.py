@@ -50,12 +50,14 @@ def index(request):
 #             return Response({"status": "success", "data": serializer.data})
 
 
-class MenuItemView(ListCreateAPIView):
+class MenuItemsView(ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
 
 
 class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
 

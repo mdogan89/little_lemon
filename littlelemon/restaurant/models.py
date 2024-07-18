@@ -12,7 +12,7 @@ class Booking(models.Model):
     #     # unique_together = ("name", "date")
 
     def __str__(self):
-        return self.name
+        return f"{self.name} on {self.date.strftime('%Y-%m-%d %H:%M')}"
 
 
 class MenuItem(models.Model):
@@ -25,3 +25,7 @@ class MenuItem(models.Model):
 
     def get_item(self):
         return f"{self.title} : {str(self.price)}"
+
+    # class Meta:
+    #     verbose_name = 'Menu'
+    #     verbose_name_plural = 'Menu Items'

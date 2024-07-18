@@ -1,9 +1,5 @@
 from django.test import TestCase, Client
-from django.urls import reverse
-from rest_framework import status
-from rest_framework.test import APIClient
 from restaurant.models import MenuItem
-from restaurant.serializers import MenuItemSerializer
 from django.contrib.auth.models import User
 
 

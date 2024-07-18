@@ -31,7 +31,7 @@
         <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="{% url 'menu' %}">Menu</a></li>
-        <li><a href="{#}">Book</a></li>
+        <li><a href="{% url 'booking-list' %}">Book</a></li>
     </ul>
 </nav>
 
@@ -42,7 +42,7 @@
             <p>
                 30% Off This Weekend
             </p>
-            <a href="#" class="cta"> Book now </a>
+            <a href="{% url 'booking-list' %}" class="cta"> Book now </a>
         </article>
     </section>
     <section>
@@ -63,7 +63,7 @@
                 Reserve your table for an Italian, Greek, and Turkish dining experience.
             </p>
             <p>
-                <a href="#">Book your table now</a>
+                <a href="{% url 'booking-list' %}">Book your table now</a>
             </p>
         </article>
         <article>

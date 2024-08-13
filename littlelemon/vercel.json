@@ -23,5 +23,11 @@
             "src": "/(.*)",
             "dest": "littlelemon/wsgi.py"
         }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
     ]
 }

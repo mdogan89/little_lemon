@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "vercel_django/wsgi.py",
+            "src": "littlelemon/wsgi.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
@@ -21,7 +21,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "vercel_django/wsgi.py"
+            "dest": "littlelemon/wsgi.py"
         }
     ]
 }

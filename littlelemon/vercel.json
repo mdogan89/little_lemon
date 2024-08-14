@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "littlelemon/wsgi.py",
+            "src": "project_name/wsgi.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
@@ -11,24 +11,17 @@
         },
         {
             "src": "build_files.sh",
-            "use": "@vercel/static"
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "staticfiles"
+            }
         }
     ],
     "routes": [
         {
-            "src": "/staticfiles/(.*)",
-            "dest": "/staticfiles/$1"
-        },
-        {
             "src": "/(.*)",
-            "dest": "littlelemon/wsgi.py"
-        },
-        {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/.*",
-            "dest": "/index.html"
+            "dest": "project_name/wsgi.py"
         }
-    ]
+    ],
+    "outputDirectory": "staticfiles"
 }

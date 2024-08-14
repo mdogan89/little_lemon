@@ -29,7 +29,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("restaurant/", include("restaurant.urls")),
+    path("", include("restaurant.urls")),
     path("booking/", include(router.urls), name="booking"),
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.authtoken")),
